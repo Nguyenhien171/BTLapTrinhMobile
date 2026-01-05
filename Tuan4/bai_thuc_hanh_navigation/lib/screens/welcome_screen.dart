@@ -11,12 +11,12 @@ class WelcomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            FlutterLogo(
-              size: 120,
-              style: FlutterLogoStyle.markOnly,
-            ),
+            FlutterLogo(size: 120, style: FlutterLogoStyle.markOnly),
             const SizedBox(height: 30),
-            const Text("Flutter Framework", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            const Text(
+              "Flutter",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
             const SizedBox(height: 10),
             const Text(
               "Flutter is a modern UI toolkit for building native applications.",
@@ -30,9 +30,14 @@ class WelcomeScreen extends StatelessWidget {
                 onPressed: () => Navigator.pushNamed(context, '/list'),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
                 ),
-                child: const Text("I'm ready", style: TextStyle(color: Colors.white)),
+                child: const Text(
+                  "I'm ready",
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ),
           ],
